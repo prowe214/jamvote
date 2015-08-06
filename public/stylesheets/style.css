@@ -116,4 +116,13 @@ nav {
   font-size: 1em;
 }
 
-.votes, .score, .info {float: left}
+.votes, .score, .info {
+  float: left;
+  margin-left: 15px;
+  font-family: sans-serif;
+}
+
+.score, .votes {
+  width: 50px;
+  text-align: center;
+}
