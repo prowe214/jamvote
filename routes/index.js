@@ -18,12 +18,12 @@ router.post('/addsong', function(req, res, next) {
 });
 
 router.post('/:id/upvote', function(req, res, next) {
-  posts.update({_id: req.params.id}, {$inc: {votes: 1}});
+  posts.update({_id: req.params.id}, {$inc: {score: 1}});
   res.redirect('/', {title: 'JamVote'});
 });
 
 router.post('/:id/downvote', function(req, res, next) {
-  posts.update({_id: req.params.id}, {$inc: {votes: -1}});
+  posts.update({_id: req.params.id}, {$inc: {score: -1}});
   res.redirect('/', {title: 'JamVote'});
 });
 
