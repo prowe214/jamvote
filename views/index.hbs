@@ -9,7 +9,6 @@
 <hr>
 {{#posts}}
   <section>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{url}}" frameborder="0" allowfullscreen></iframe>
     <h3 class = 'score'>{{score}}</h3>
     <div class="votes">
       <form action="{{_id}}/upvote" method="post">
@@ -27,6 +26,7 @@
      <h3>{{title}}</h3>
      <h3>{{artist}}</h3>
     </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{url}}" frameborder="0" allowfullscreen></iframe>
   </section>
   <label><button class='commentsButton'>Comments</button></label>
   <div class="comments hide">

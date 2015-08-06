@@ -127,6 +127,8 @@ iframe {
   left: 50%;
 }
 
+label {margin-left: 15px;}
+
 body {
   color: white;
   background: rgba(76,76,76,1);
