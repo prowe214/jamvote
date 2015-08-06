@@ -12,10 +12,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/addsong', function(req, res, next) {
-  posts.insert(req.body, function (err, doc) {
-    posts.update(req.body, {$set: {score: 1}});
-    res.redirect('/', {title: 'JamVote'});
-  });
+  posts.insert(req.body);
+  posts.update(req.body, {$set: {score: 1}});
+  res.redirect('/', {title: 'JamVote'});
 });
 
 router.post('/:id/upvote', function(req, res, next) {
