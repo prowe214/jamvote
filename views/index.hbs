@@ -2,7 +2,7 @@
   <h3 class='addSongTitle'>Add A song</h3>
   <label>Artist <input type="text" name="artist"></label>
   <label>Title of the song <input type='text' name= 'title'></label>
-  <label>SoundCloud URL<input type="text" name="url"></label>
+  <label>YouTube ID<input type="text" name="url"></label>
 
   <button type="submit">Submit</button>
 </form>
@@ -28,8 +28,10 @@
    {{artist}}
  </h3>
    {{url}}
- <iframe width="560" height="315" src="{{url}}" frameborder="0" allowfullscreen></iframe>
+   <div >
 
+   </div>
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/{{url}}" frameborder="0" allowfullscreen></iframe>
 </section>
 <label><button class='commentsButton'>Comments</button></label>
 <div class="comments hide">
