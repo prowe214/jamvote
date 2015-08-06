@@ -14,17 +14,17 @@ router.get('/', function(req, res, next) {
 router.post('/addsong', function(req, res, next) {
   posts.insert(req.body);
   posts.update(req.body, {$set: {score: 1}});
-  res.redirect('/', {title: 'JamVote'});
+  res.redirect(302, '/');
 });
 
 router.post('/:id/upvote', function(req, res, next) {
   posts.update({_id: req.params.id}, {$inc: {score: 1}});
-  res.redirect('/', {title: 'JamVote'});
+  res.redirect(302, '/');
 });
 
 router.post('/:id/downvote', function(req, res, next) {
   posts.update({_id: req.params.id}, {$inc: {score: -1}});
-  res.redirect('/', {title: 'JamVote'});
+  res.redirect(302, '/');
 });
 
 module.exports = router;
