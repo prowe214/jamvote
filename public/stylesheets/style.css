@@ -123,7 +123,7 @@ nav {
 }
 
 iframe {
-  position: absolute;
+  margin-left: 50%;
   left: 50%;
 }
 
