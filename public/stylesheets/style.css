@@ -90,3 +90,24 @@ nav {
    text-shadow: 2px 2px 2px rgba(0,0,0,0.6);
 
  }
+ .showCommentsButton {
+   padding:10px;
+   background: white;
+   border: 2px solid black;
+ }
+.showCommentsButton:hover {
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+.hideCommentsButton{
+  padding:10px;
+  background: white;
+  border: 2px solid black;
+}
+.hideCommentsButton:hover {
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+.hide {
+  height: 0px;
+  visibility: hidden;
+  display: none;
+}

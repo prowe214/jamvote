@@ -1,6 +1,32 @@
-
+<!-- {{#posts}} -->
+<section>
+  <h3 class = 'score'>{{score}}</h3>
 <i class="fa fa-arrow-circle-up upvote vote"></i>
 <i class="fa fa-arrow-circle-down downvote vote"></i>
 
+ <h3>
+   {{title}}
+ </h3>
+ <h3>
+   {{artist}}
+</h3>
+<script src="//connect.soundcloud.com/sdk-2.0.0.js"></script>
+<script>
+SC.initialize({
+  client_id: '0a8387b241ab7dbc6e97cdf641a2d721'
+});
 
+var track_url = '{{url}}';
+SC.oEmbed(track_url, { auto_play: true }, function(oEmbed) {
+  console.log('oEmbed response: ' + oEmbed);
+});
+</script>
+</section>
+<label><button class='showCommentsButton'>Show Comments</button></label>
+<div class="comments">
+{{comments}}
+</div>
 <hr>
+<!-- {{/posts}} -->
+<label><button class='showCommentsButton'>Show Comments</button></label>
+<label><button class='hideCommentsButton'>Hide Comments</button></label>
