@@ -8,37 +8,32 @@
 </form>
 <hr>
 {{#posts}}
-<section>
-  <h3 class = 'score'>{{score}}</h3>
-  <form action="{{_id}}/upvote" method="post">
-    <button type="submit">
-      <i class="fa fa-arrow-circle-up upvote vote"></i>
-    </button>
-  </form>
-  <form action="{{_id}}/downvote" method="post">
-    <button type="submit">
-      <i class="fa fa-arrow-circle-down downvote vote"></i>
-    </button>
-  </form>
-
- <h3>
-   {{title}}
- </h3>
- <h3>
-   {{artist}}
- </h3>
-   {{url}}
-   <div >
-
-   </div>
- <iframe width="560" height="315" src="https://www.youtube.com/embed/{{url}}" frameborder="0" allowfullscreen></iframe>
-</section>
-<label><button class='commentsButton'>Comments</button></label>
-<div class="comments hide">
-  <p>
-    test
-  </p>
-{{comments}}
-</div>
-<hr>
+  <section>
+    <h3 class = 'score'>{{score}}</h3>
+    <div class="votes">
+      <form action="{{_id}}/upvote" method="post">
+        <button type="submit">
+          <i class="fa fa-arrow-circle-up upvote vote"></i>
+        </button>
+      </form>
+      <form action="{{_id}}/downvote" method="post">
+        <button type="submit">
+          <i class="fa fa-arrow-circle-down downvote vote"></i>
+        </button>
+      </form>
+    </div>
+    <div class="info">
+     <h3>{{title}}</h3>
+     <h3>{{artist}}</h3>
+    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{url}}" frameborder="0" allowfullscreen></iframe>
+  </section>
+  <label><button class='commentsButton'>Comments</button></label>
+  <div class="comments hide">
+    <p>
+      test
+    </p>
+  {{comments}}
+  </div>
+  <hr>
 {{/posts}}

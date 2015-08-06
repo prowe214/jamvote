@@ -115,3 +115,5 @@ nav {
   display: inline-block;
   font-size: 1em;
 }
+
+.votes, .score, .info {float: left}
