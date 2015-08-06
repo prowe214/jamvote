@@ -11,18 +11,21 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.get('/addsong', function(req, res, next) {
-  res.render('addSong', { title: 'JamVote' });
+router.post('/addsong', function(req, res, next) {
+  posts.insert(req.body, function (err, doc) {
+    posts.update(req.body, {$set {score: 1}});
+    res.redirect('/', {title: 'JamVote'})
+  });
 });
 
 router.post('/:id/upvote', function(req, res, next) {
   posts.update({_id: req.params.id}, {$inc: {votes: 1}});
-  res.redirect('/', {title: 'JamVote', posts: docs});
+  res.redirect('/', {title: 'JamVote'});
 });
 
 router.post('/:id/downvote', function(req, res, next) {
   posts.update({_id: req.params.id}, {$inc: {votes: -1}});
-  res.redirect('/', {title: 'JamVote', posts: docs});
+  res.redirect('/', {title: 'JamVote'});
 });
 
 module.exports = router;
