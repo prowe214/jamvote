@@ -10,8 +10,15 @@
 {{#posts}}
 <section>
   <h3 class = 'score'>{{score}}</h3>
-<i class="fa fa-arrow-circle-up upvote vote"></i>
-<i class="fa fa-arrow-circle-down downvote vote"></i>
+  <form action="{{_id}}/upvote" method="post">
+    <button type="submit">
+      <i class="fa fa-arrow-circle-up upvote vote"></i>
+      </button>
+  </form>
+  <i class="fa fa-arrow-circle-down downvote vote"></i>
+    <button type="submit">
+      </button>
+  </form>
 
  <h3>
    {{title}}
@@ -31,10 +38,11 @@ SC.oEmbed(track_url, { auto_play: true }, function(oEmbed) {
 });
 </script>
 </section>
-<label><button class='showCommentsButton'>Show Comments</button></label>
-<label><button class='hideCommentsButton hide'>Hide Comments</button></label>
-
-<div class="comments">
+<label><button class='commentsButton'>Comments</button></label>
+<div class="comments hide">
+  <p>
+    test
+  </p>
 {{comments}}
 </div>
 <hr>
