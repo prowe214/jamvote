@@ -123,8 +123,8 @@ nav {
 }
 
 iframe {
-  margin-left: 50%;
-  left: 60%;
+  float: left;
+  margin-left: 60%;
 }
 
 label {margin-left: 20px;}
