@@ -124,10 +124,12 @@ nav {
 
 iframe {
   margin-left: 50%;
-  left: 50%;
+  left: 60%;
 }
 
-label {margin-left: 15px;}
+label {margin-left: 20px;}
+
+input {margin-left: 5px;}
 
 body {
   color: white;
