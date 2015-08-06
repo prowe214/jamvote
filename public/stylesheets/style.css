@@ -122,6 +122,11 @@ nav {
   font-family: sans-serif;
 }
 
+iframe {
+  position: absolute;
+  left: 50%;
+}
+
 .score, .votes {
   width: 50px;
   text-align: center;
