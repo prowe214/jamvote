@@ -1,4 +1,10 @@
-<!-- {{#posts}} -->
+<form class="addSong" action="/addsong" method="post">
+  <h3 class='addSongTitle'>Add A song</h3>
+  <label>SoundCloud URL<input type="text" name="url"></label>
+  <button type="submit">Submit</button>
+</form>
+<hr>
+{{#posts}}
 <section>
   <h3 class = 'score'>{{score}}</h3>
 <i class="fa fa-arrow-circle-up upvote vote"></i>
@@ -23,10 +29,10 @@ SC.oEmbed(track_url, { auto_play: true }, function(oEmbed) {
 </script>
 </section>
 <label><button class='showCommentsButton'>Show Comments</button></label>
+<label><button class='hideCommentsButton'>Hide Comments</button></label>
+
 <div class="comments">
 {{comments}}
 </div>
 <hr>
-<!-- {{/posts}} -->
-<label><button class='showCommentsButton'>Show Comments</button></label>
-<label><button class='hideCommentsButton'>Hide Comments</button></label>
+{{/posts}}

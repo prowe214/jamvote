@@ -111,3 +111,7 @@ nav {
   visibility: hidden;
   display: none;
 }
+.addSongTitle{
+  display: inline-block;
+  font-size: 1em;
+}
